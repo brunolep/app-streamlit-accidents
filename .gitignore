@@ -53,6 +53,7 @@ Thumbs.db # Windows
 # Fichiers de Jupyter Notebook (si vous en utilisez)
 .ipynb_checkpoints
 .ipynb
+notebooks
 
 # Fichiers Streamlit (si des caches ou autres sont générés)
 .streamlit/
