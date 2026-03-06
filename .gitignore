@@ -1,0 +1,57 @@
+# Fichiers et dossiers Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+build/
+develop-eggs/
+dist/
+.eggs/
+
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.manifest
+*.spec
+
+# Fichiers de l'environnement virtuel (si vous en utilisez un)
+.venv
+.flaskenv
+
+# Fichiers de logs
+*.log
+log/
+
+# Fichiers de base de données
+*.sqlite
+*.db
+*.duckdb
+*.csv
+*.xlsm
+*.xlsx
+
+# Fichiers de configuration sensibles (mots de passe, clés API)
+config.ini
+*.json # Attention avec ça, si vous avez des fichiers JSON importants, soyez plus spécifique
+
+# Fichiers spécifiques à l'OS
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Fichiers spécifiques aux IDE (ex: VS Code)
+.vscode/
+
+# Fichiers de Jupyter Notebook (si vous en utilisez)
+.ipynb_checkpoints
+.ipynb
+
+# Fichiers Streamlit (si des caches ou autres sont générés)
+.streamlit/
