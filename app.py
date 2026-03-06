@@ -14,34 +14,6 @@ import re
 
 
 # ==========
-# Functions
-# ==========
-
-# def request_function(database, query_request) :
-
-#     try:
-#         con = duckdb.connect(database, read_only=False)
-#         results = con.execute(query_request).fetchdf()
-#         # st.dataframe(results, hide_index=True)
-
-#     except Exception as e:
-#         print(f"Erreur de connexion : {e}")
-
-#     finally:
-#         if 'con' in locals() and con:
-#             con.close()
-
-#     return results
-
-
-# # ==========
-# # DATA SOURCE
-# # ==========
-
-# duckdb_file = "./data/database_accidents_2024.duckdb" # Assurez-vous que c'est le bon nom de fichier
-
-
-# ==========
 # APP
 # ==========
 
@@ -59,13 +31,12 @@ st.set_page_config(
 
 pg = st.navigation(
     [
-        st.Page("home.py", title="Accueil", icon="🏠"),
-        st.Page("view_datasets.py", title="View Dataset", icon="🔍"),
+        st.Page("home.py", title="Accueil", icon="1️⃣"),
+        st.Page("view_datasets.py", title="View Dataset", icon="2️⃣"),
+        st.Page("dashboard.py", title="Dashboard", icon ="3️⃣"),
     ],
     position="top",
 )
 
-
-# pg = st.navigation(pages, postion = 'top')
 
 pg.run()

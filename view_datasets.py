@@ -9,7 +9,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import duckdb
-import openpyxl
+# import openpyxl
 import re
 
 
@@ -40,13 +40,8 @@ def request_function(database, query_request) :
 duckdb_file = "./data/database_accidents_2024.duckdb" # Assurez-vous que c'est le bon nom de fichier
 
 
-st.header('**ANALYSE DES ACCIDENTS 2024**')
-st.markdown('')
 
-with st.expander('Informations',expanded = False, icon ='ℹ️') :
-
-    st.caption('Données issues du site https://www.data.gouv.fr :')
-    st.caption('https://www.data.gouv.fr/datasets/bases-de-donnees-annuelles-des-accidents-corporels-de-la-circulation-routiere-annees-de-2005-a-2024')
+st.title("Bienvenue sur l'Application d'Analyse des Accidents Corporels de la Route")
 
 
 tab1 , tab2, tab3, tab4, tab5 = st.tabs(['Véhicules', 'Accidents', 'Localisations', 'Usagers', 'Requêtes'])
