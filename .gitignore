@@ -37,6 +37,7 @@ log/
 *.csv
 *.xlsm
 *.xlsx
+data
 
 # Fichiers de configuration sensibles (mots de passe, clés API)
 config.ini
