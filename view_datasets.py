@@ -174,40 +174,8 @@ with tab5 :
     
     
     
-    
-    # Appel de la nouvelle fonction pour obtenir les noms des tables
-    table_names_list = get_table_names_from_duckdb(duckdb_file)
 
-    if table_names_list:
-        st.subheader("Noms de toutes les tables dans le fichier DuckDB :")
-        st.write(table_names_list)  # Affiche la liste des noms de tables
-    else:
-        st.write("Impossible de récupérer les noms des tables ou aucune table trouvée.")
-
-    # for table_name in tables_to_check:
-    #     st.subheader(f"Table : {table_name}")
-    #     raw_column_data = get_column_names_from_duckdb(duckdb_file, table_name)
-
-    # if raw_column_data is not None:
-    #     # Assurez-vous que c'est une liste de chaînes
-    #     final_column_names_list = []
-    #     if isinstance(raw_column_data, list):
-    #         final_column_names_list = raw_column_data
-    #     elif hasattr(raw_column_data, "tolist"):
-    #         final_column_names_list = raw_column_data.tolist()
-    #     elif hasattr(raw_column_data, "values"):
-    #         final_column_names_list = list(raw_column_data.values())
-    #     else:
-    #         final_column_names_list = list(raw_column_data)
-
-    #     df_horizontal_names = pd.DataFrame([final_column_names_list])
-    #     st.dataframe(df_horizontal_names)
-    # else:
-    #     st.write(
-    #         f"Impossible de récupérer les noms des colonnes pour la table '{table_name}'."
-    #     )
-
-    sql_request = st.text_area(label= "Entrer la commande")
+    sql_request = st.text_area(label= "Entrer la commande", placeholder ="Enter your SQL code")
 
     if sql_request :
 
@@ -216,3 +184,36 @@ with tab5 :
         results = request_function(database=duckdb_file, query_request = sql_request)
 
         st.dataframe(results, hide_index=True)
+
+    
+    
+    st.subheader("Présentation des tables :")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1 :
+        results = request_function(database=duckdb_file, query_request = "SELECT * FROM accidents LIMIT 5;")
+        st.write(" Table -> accidents")
+        st.dataframe(results, hide_index=True)
+    
+    
+    with col2 :
+        results = request_function(database=duckdb_file, query_request = "SELECT * FROM vehicules LIMIT 5;")
+        st.write(" Table -> vehicules")
+        st.dataframe(results, hide_index=True)
+    
+    
+    col1, col2 = st.columns(2)
+    
+    with col1 :
+        results = request_function(database=duckdb_file, query_request = "SELECT * FROM localisations LIMIT 5;")
+        st.write(" Table -> localisations")
+        st.dataframe(results, hide_index=True)
+    
+    
+    with col2 :
+        results = request_function(database=duckdb_file, query_request = "SELECT * FROM usagers LIMIT 5;")
+        st.write(" Table -> usagers")
+        st.dataframe(results, hide_index=True)
+    
+    
