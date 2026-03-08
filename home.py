@@ -72,7 +72,7 @@ st.header("Description Détaillée des Variables")
 st.write("Explorez ci-dessous la signification de chaque variable présente dans les bases de données BAAC.")
 
 
-with st.expander("Fichier CARACTERISTIQUES : Circonstances générales de l'accident"):
+with st.expander("Fichier CARACTERISTIQUES : Circonstances générales de l'accident", icon = "✍🏻"):
     st.markdown("""
     *   **`Num_Acc`** : Numéro d'identifiant de l'accident.
     *   **`jour`** : Jour de l'accident.
@@ -126,7 +126,7 @@ with st.expander("Fichier CARACTERISTIQUES : Circonstances générales de l'acci
     """)
 
 # --- Rubrique LIEUX ---
-with st.expander("Fichier LIEUX : Détails sur le lieu de l'accident"):
+with st.expander("Fichier LIEUX : Détails sur le lieu de l'accident", icon = "🛣"):
     st.markdown("""
     *   **`Num_Acc`** : Identifiant de l'accident (identique au fichier Caractéristiques).
     *   **`catr`** : Catégorie de route.
@@ -207,7 +207,7 @@ with st.expander("Fichier LIEUX : Détails sur le lieu de l'accident"):
     """)
 
 # --- Rubrique VEHICULES ---
-with st.expander("Fichier VEHICULES : Informations sur les véhicules impliqués"):
+with st.expander("Fichier VEHICULES : Informations sur les véhicules impliqués", icon = "🚗"):
     st.markdown("""
     *   **`Num_Acc`** : Identifiant de l'accident.
     *   **`id_vehicule`** : Identifiant unique du véhicule.
@@ -267,7 +267,7 @@ with st.expander("Fichier VEHICULES : Informations sur les véhicules impliqués
     """)
 
 # --- Rubrique USAGERS ---
-with st.expander("Fichier USAGERS : Informations sur les personnes impliquées"):
+with st.expander("Fichier USAGERS : Informations sur les personnes impliquées", icon = "🕵🏼"):
     st.markdown("""
     *   **`Num_Acc`** : Identifiant de l'accident.
     *   **`id_usager`** : Identifiant unique de l'usager.
