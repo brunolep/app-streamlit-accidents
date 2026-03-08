@@ -158,14 +158,18 @@ with tab5 :
 
     tables_to_check = ["vehicules", "accidents", "localisations", "usagers"]
 
-    theme_selected = st.selectbox(
-        label = "Selection du type de review ?",
-        options = ('Joins','GroupBy','Windows Functions'),
-        index = None,
-        placeholder = 'Select a theme',
-    )
+
+
+    with st.sidebar :
+        
+        theme_selected = st.selectbox(
+            label = "Selection du type de review ?",
+            options = ('Joins','GroupBy','Windows Functions'),
+            index = None,
+            placeholder = 'Select a theme',
+        )
     
-    st.write(f"Theme sélectionné : {theme_selected}")
+        st.write(f"Theme sélectionné : {theme_selected}")
     
     
     
